@@ -15,7 +15,7 @@ EMAIL=None
 PASSWORD=None
 NEWS_API_KEY=None
 OPENWEATHER_APP_ID=None
-TMDB_API_KEY=None
+TMDB_API_KEY=None 
 ```
 pip install -r requirements.txt
 
