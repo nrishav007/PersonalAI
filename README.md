@@ -17,6 +17,8 @@ NEWS_API_KEY=None
 OPENWEATHER_APP_ID=None
 TMDB_API_KEY=None 
 ```
+python -m venv env
+. env/Scripts/activate
 pip install -r requirements.txt
 
 Replace `None` with your values
