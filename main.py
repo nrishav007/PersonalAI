@@ -4,7 +4,7 @@ import pyttsx3
 import speech_recognition as sr
 from decouple import config
 from datetime import datetime
-from functions.os_ops import open_calculator, open_camera, open_cmd, open_notepad, open_discord
+from functions.os_ops import open_calculator, open_camera, open_cmd, open_notepad, open_discord, shutdown
 from random import choice
 from utils import opening_text
 from pprint import pprint
@@ -72,7 +72,7 @@ def take_user_input():
                 speak('Have a good day sir!')
             exit()
     except Exception:
-        speak('Sorry, I could not understand. Could you please say that again?')
+        # speak('Sorry, I could not understand. Could you please say that again?')
         query = 'None'
     return query
 
@@ -175,3 +175,7 @@ if __name__ == '__main__':
             speak(f"Also, the weather report talks about {weather}")
             speak("For your convenience, I am printing it on the screen sir.")
             print(f"Description: {weather}\nTemperature: {temperature}\nFeels like: {feels_like}")
+        
+        elif 'shutdown' in query:
+            speak('Turning off your PC. PLease wait.')
+            shutdown()

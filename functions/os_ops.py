@@ -26,3 +26,6 @@ def open_camera():
 
 def open_calculator():
     sp.Popen(paths['calculator'])
+
+def shutdown():
+    os.system("shutdown /s /t 0")
